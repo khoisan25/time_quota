@@ -2,23 +2,31 @@
 
 class Session {
 
-  String name;
   int id;
-  DateTime startDate;
-  DateTime endDate;
-  String description;
-  int colorThemeValue;
-  var iconName;
+  String name;
+  int age;
 
-  Session(this.name,
+  //DateTime startDate;
+  //DateTime endDate;
+  //String description;
+  //int colorThemeValue;
+  //var iconName;
+
+  Session(
       this.id,
-      this.startDate,
-      this.endDate,
-      this.description,
-      this.colorThemeValue,
-      this.iconName){
+      this.name,
+      this.age,
+      ){}
 
-  }
+  // Session(this.name,
+  //     this.id,
+  //     this.startDate,
+  //     this.endDate,
+  //     this.description,
+  //     this.colorThemeValue,
+  //     this.iconName){
+  //
+  // }
 
 
   // public void createSession(Session session){

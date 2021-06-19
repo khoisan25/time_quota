@@ -2,10 +2,15 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import '../../logic/IOdata.dart';
 
 
 
 class Activity_menu extends StatelessWidget {
+
+  final sessionData = new IOdata();
+
+  Map<String, dynamic> sessionPipeline = {'zero': 0, 'one': 1, 'two': 2};
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,9 @@ class Activity_menu extends StatelessWidget {
 
               ),
             FloatingActionButton.extended(
-                onPressed: (){},
+                onPressed: (){
+                  print(sessionPipeline);
+                },
                 label: Text('   Start   '),
                 backgroundColor: Colors.green,
                 icon: Icon(Icons.play_arrow_rounded),
@@ -50,7 +57,7 @@ class Activity_menu extends StatelessWidget {
               width: 80,
               child: FloatingActionButton.extended(
               onPressed: (){},
-              label: Text('New record',
+              label: Text('Chains',
               style: TextStyle(fontSize: 10),),
               backgroundColor: Color(0xff696969),
               splashColor: Colors.greenAccent,
@@ -86,6 +93,7 @@ class Activity_menu extends StatelessWidget {
 
                   ),
                   ),
+
                   
                   Center(
                     child: Text("No entries...",
